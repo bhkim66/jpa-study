@@ -22,9 +22,9 @@ public class Team {
     @Column(name = "NAME", nullable = false)
     private String name;
 
-
     @Builder
     public Team(String name) {
         this.name = name;
     }
+
 }
