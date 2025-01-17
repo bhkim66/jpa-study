@@ -11,7 +11,7 @@ import javax.persistence.*;
 
 @Getter
 @Entity
-@Table(name = "address")
+@Table(name = "ADDRESS")
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 public class Address extends BaseEntity {
 

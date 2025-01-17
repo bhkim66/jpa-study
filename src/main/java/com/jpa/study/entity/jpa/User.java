@@ -41,13 +41,19 @@ public class User extends BaseEntity {
     @OneToMany(mappedBy = "user")
     private List<Address> addresses = new ArrayList<>();
 
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "TEAM_SEQ")
+    private Team team;
+
     @Builder
-    public User(String id, String password, String name, int age, String phoneNumber, List<Address> addresses) {
+    public User(String id, String password, String name, int age, String phoneNumber, List<Address> addresses, Team team) {
         this.id = id;
         this.password = password;
         this.name = name;
         this.age = age;
         this.phoneNumber = phoneNumber;
         this.addresses = addresses;
+        this.team = team;
     }
 }
